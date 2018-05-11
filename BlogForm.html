@@ -1,0 +1,133 @@
+<html>
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <title>Blog</title>
+  <style>
+    h1 {
+      margin-left: 400px;
+      color: rgba(3, 3, 14, 0.863);
+    }
+
+    form {
+      margin-left: 150px;
+    }
+
+    body {
+      align-content: center;
+    }
+
+    small {
+      margin-left: 80px;
+    }
+
+    .form-control {
+
+
+      margin-left: 80px;
+
+    }
+
+    .button {
+      position: absolute;
+      left: 30%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <br>
+  <h1>Blog Form</h1>
+
+  <br>
+  <!--Form Body-->
+  <form onsubmit="display()">
+    <div class="form-group">
+      <div class="col-md-6 mb-3">
+        <labelid="ash" for="BlogName">Blog Tittle</labelid>
+          <input type="Text" class="form-control" id="BlogName" aria-describedby="blogname" placeholder="Enter blog Tittle" required="false">
+
+      </div>
+      <div class="form-group">
+        <div class="col-md-6 mb-3">
+          <label for="ImageURL">Blog Image Url</label>
+          <input type="url" class="form-control" id="ImageURL" placeholder="Image Url" required="false">
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 mb-3">
+            <label for="BlogDetail1">Blog Detail 1</label>
+            <textarea class="form-control" id="BlogDetail1" placeholder="Blog Detail 1" required="false"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 mb-3">
+              <label for="BlogDetail2">Blog Detail 2</label>
+              <textarea class="form-control" id="BlogDetail2" placeholder="Blog Detail 2" required="false"></textarea>
+            </div>
+            <div class="form-group">
+              <div class="col-md-6 mb-3">
+                <label for="Blog Detail 3">Blog Detail 3</label>
+                <textarea class="form-control" id="BlogDetail3" placeholder="Blog Detail 3"></textarea>
+              </div>
+              <div class="form-group">
+                <div class="col-md-6 mb-3">
+                  <label for="author">Blog Author</label>
+                  <input type="Text" class="form-control" id="author" placeholder="Name of Author">
+                </div>
+                <div class="button">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+  </form>
+  
+  <script LANGUAGE="JavaScript" type="text/javascript">
+  //called By Submit Button
+    function display() {
+      
+      var BlogName = document.getElementById("BlogName").value;
+      var ImageUrl = document.getElementById("ImageURL").value;
+      var BlogDetail1 = document.getElementById("BlogDetail1").value;
+      var BlogDetail2 = document.getElementById("BlogDetail2").value;
+      var BlogDetail3 = document.getElementById("BlogDetail3").value;
+      var author = document.getElementById("author").value;
+      var x = {
+        BlogName: BlogName,
+        ImageUrl: ImageURL,
+        BlogDetail1: BlogDetail1,
+        BlogDetail2: BlogDetail2,
+        BlogDetail3: BlogDetail3,
+        BlogAuthor: author
+      };
+      //Output Section
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("Your Entered Values In JASON Format");
+      document.write("<br>"); document.write("<br>");
+
+      //Converts To JSON Object
+      person = JSON.stringify(x);
+      document.write(person);
+
+     
+    }
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

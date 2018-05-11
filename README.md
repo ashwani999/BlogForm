@@ -5,6 +5,9 @@ HTML form to read the fields - Title of Blog, Blog Image Url, Blog Paragraph 1, 
 Compile's all the collected data into a JSON object and print it on the screen after they press submit.
 
 SCREENSHOTS
+Input Form
 ![Alt text](json/input.JPG?raw=true "Input form")
+
+Output
 
 ![Alt text](json/output.JPG?raw=true "Output")
